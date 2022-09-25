@@ -6,6 +6,8 @@ footer {
     margin: auto;
     display: flex;
     opacity: 80%;
+    margin: 0;
+    padding: 0;
 }
 
 .center {
@@ -13,7 +15,10 @@ footer {
     margin: 0 auto;
 }
 
-#footer-txt {
-    margin: auto;
+.footer-txt {
+    margin: 4px;
 }
 
+#footer-wrp {
+    margin: auto;
+}
