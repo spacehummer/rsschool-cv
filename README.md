@@ -1,1 +1,1 @@
-https://spacehummer.github.io/rsschool-cv/cv
+https://spacehummer.github.io/rsschool-cv/
