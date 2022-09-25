@@ -1,0 +1,19 @@
+footer {
+    text-align: center;
+    background: #4e5754;
+    color: #b87333;
+    height: 32px;
+    margin: auto;
+    display: flex;
+    opacity: 80%;
+}
+
+.center {
+    width: 800px;
+    margin: 0 auto;
+}
+
+#footer-txt {
+    margin: auto;
+}
+
