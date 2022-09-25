@@ -23,7 +23,9 @@ Now I am focused on software development because I am sure that various software
 I'll add it later
 ## Experience
 Participated in the development of networking hardware, as Test Engineer, Quality Architect and Technical writer.
-
 I participated in the development of the site in a small team, where I served as a designer, technical writer and content manager.
 ## Education
 Moscow State University of Civil Engineering (MGSU), Bachelor's degree in Mathematical and computer modeling of mechanical systems and processes.
+## Languages
+* Russian: native speaker.
+* English: A2-B1 level.
