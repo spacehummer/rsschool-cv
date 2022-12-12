@@ -3,14 +3,13 @@ footer {
     background: #4e5754;
     color: #b87333;
     height: 32px;
-    margin: auto;
     display: flex;
     opacity: 80%;
     margin: 0;
     padding: 0;
 }
 
-.center {
+.content {
     width: 800px;
     margin: 0 auto;
 }
