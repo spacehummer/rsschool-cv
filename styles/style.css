@@ -80,6 +80,22 @@
     color: white;
 }
 
+
+/*<editor-fold desc="Main">*/
+.content__sections-wrapper {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.general-info {
+    grid-area: info;
+}
+
+/*</editor-fold desc="Main">*/
+
+
+/*<editor-fold desc="Footer">*/
 .footer {
     text-align: center;
     /*background: #4e5754;*/
@@ -99,3 +115,4 @@
 #footer-wrp {
     margin: auto;
 }
+/*</editor-fold desc="Footer">*/
