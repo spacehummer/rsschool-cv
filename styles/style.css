@@ -1,8 +1,7 @@
-footer {
-    text-align: center;
-    background: #4e5754;
+.header {
+    background: #3186b9;
     color: #b87333;
-    height: 32px;
+    height: max-content;
     display: flex;
     opacity: 80%;
     margin: 0;
@@ -10,8 +9,87 @@ footer {
 }
 
 .content {
-    width: 800px;
+    /* Content block standard width */
+    max-width: 1600px;
+    /* Выравнивание по центру */
     margin: 0 auto;
+}
+
+.content-header {
+    width: 100%;
+}
+
+.navigation__list {
+    /* reset default ul styles */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* в строку выровняли */
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: space-between;
+    /*width: 100%;*/
+}
+
+.navigation__list__item {
+    /*flex: 1;*/
+    /*width: 100%;*/
+}
+
+.navigation__list__item > .item__link {
+    /* Reset default styles */
+    outline: none;
+    text-decoration: none;
+    /* My styles */
+    display: inline-block;
+    width: max-content;
+    margin: 0 auto;
+    font-size: 32px;
+    /*background-color: aquamarine;*/
+    padding: 10px 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*.navigation__list__item:first-child > .item__link {*/
+/*    padding: 10px 0;*/
+/*}*/
+
+/*.navigation__list__item:last-child > .item__link {*/
+/*    padding: 10px 0;*/
+/*}*/
+
+.navigation__list__item > .item__link:link {
+    color: white;
+}
+
+.navigation__list__item > .item__link:visited {
+    color: white;
+}
+
+.navigation__list__item > .item__link:focus {
+    color: white;
+}
+
+.navigation__list__item > .item__link:hover {
+    color: white;
+}
+
+.navigation__list__item > .item__link:active {
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    /*background: #4e5754;*/
+    background: #0a4763;
+    color: #b87333;
+    height: 128px;
+    display: flex;
+    opacity: 80%;
+    margin: 0;
+    padding: 0;
 }
 
 .footer-txt {
