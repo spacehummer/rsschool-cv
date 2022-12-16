@@ -10,7 +10,7 @@
     <!--  normalize.css for normalize default agent styles.  -->
     <link rel="stylesheet" type="text/css" href="./styles/normalize.css">
     <!--  Styles for highlight code in code example section by highlight.js.  -->
-    <link rel="stylesheet" href="./styles/default.min.css">
+    <link rel="stylesheet" href="./styles/vs.min.css">
     <!--  My styles.  -->
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
     <!--  Script for highlight code in code example section by highlight.js.  -->
@@ -154,63 +154,38 @@
 <pre class="js code-example">
 <code>
 /**
- * Get files from links, stored in object, and save to default browser download dir.
- * @param linksObj      {Object}  - Object with links.
- * @param [modeDebug]   {Boolean} - work in debug mode - debug information.
- *                                  Optional. Default = false.
- * @param [modeVerbose] {Boolean} - work in verbose mode - more information about work.
- *                                  Optional. Default = false.
+ * Extract all strings of Array as text node wrapped in specified child elements in node.
+ * @param nodeToUpdate        {Object}  - the node to which child elements items will be added.
+ * @param elementsArray       {Array}   - Array of strings, which will be converted into text nodes.
+ * @param elementName         {String}  - name of elements (tag), which will be used for wrap
+ *                                        every text node.
+ * @param elementsClassesList {Array}   - name of classes for each element, in with text nodes
+ *                                        will be wrapped.
+ * @description If elementsClassesList specified, add classes from list of classes
+ *              for each child element.
  */
-function getSourceByLinksFromObject(
-  linksObj,
-  modeDebug = false,
-  modeVerbose = false,
+function addAllFieldsAsTextNode(
+  nodeToUpdate,
+  elementsArray,
+  elementName,
+  elementsClassesList,
 ) {
-  const arrayOfLinks = Array();
-
-  if (modeVerbose) {
-    // eslint-disable-next-line no-console
-    console.log(
-      `\n${"".padStart(45, `-`)}`
-      + `\n**** Download files by links from object ****`
-      + `\n${"".padStart(45, `-`)}`,
-    );
+  for (let i = 0; i < elementsArray.length; i++) {
+    nodeToUpdate.appendChild(document.createElement(elementName));
   }
-  if (modeDebug) {
-    // eslint-disable-next-line no-console
-    console.log("Source object:\n", linksObj);
-    // eslint-disable-next-line no-console
-    console.log(`Object length top lvl = ${linksObj.length}`);
+  /* Append elements and work with classes only if node have children.
+  * TODO: error handling!
+  * */
+  if (!nodeToUpdate.hasChildNodes()) {
+    return;
   }
-  if (modeVerbose) {
-    // eslint-disable-next-line no-console
-    console.log(`\nStep 1: get all finite values from source object in Array.`);
-  }
-  const arrayOfData = getFiniteValueAndReturnArray(linksObj);
-  if (modeDebug) {
-    // eslint-disable-next-line no-console
-    console.log("All finite values from source object:\n", arrayOfData);
-  }
-  if (modeVerbose) {
-    // eslint-disable-next-line no-console
-    console.log(`\nStep 2: get only links from values.`);
-  }
-  arrayOfData.forEach((value) => {
-    if (checkStringIsUrl(value)) {
-      arrayOfLinks.push(value);
+  const children = nodeToUpdate.childNodes;
+  for (let i = 0; i < children.length; ++i) {
+    children[i].appendChild(document.createTextNode(elementsArray[i]));
+    if (elementsClassesList[i] !== '') {
+      children[i].classList.add(elementsClassesList[i]);
     }
-  });
-  if (modeDebug) {
-    // eslint-disable-next-line no-console
-    console.log("All links from source object:\n", arrayOfLinks);
   }
-  if (modeVerbose) {
-    // eslint-disable-next-line no-console
-    console.log(`\nStep 3: download files.`);
-  }
-  // arrayOfLinks.forEach((link) => {
-  //   getSourceByLink(link);
-  // });
 }
 </code>
 </pre>
