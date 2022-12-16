@@ -103,6 +103,10 @@
     height: max-content;
 }
 
+.sections-wrapper__content-block {
+    padding: 16px;
+}
+
 .general-info {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -115,6 +119,10 @@
     gap: 16px;
 }
 
+.section {
+    padding: 16px;
+    min-width: 0;
+}
 
 .general-info > h1 {
     grid-area: name;
@@ -187,6 +195,41 @@
     grid-area: avatar;
     justify-self: center;
 }
+
+.code-example > code {
+    overflow-y: scroll;
+    overflow-x: scroll;
+    max-height: 512px;
+    margin: 0;
+}
+
+
+/*<editor-fold desc="Scrollbar styles for code block">*/
+
+/* Scrollbar: main style */
+.code-example > code::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+/* Track */
+.code-example > code::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+/* Handle */
+.code-example > code::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background: #80D2FF;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+.code-example > code::-webkit-scrollbar-thumb:window-inactive {
+    background: #CFDCE6;
+}
+/*</editor-fold desc="Scrollbar styles for code block">*/
 
 /*</editor-fold desc="Main">*/
 

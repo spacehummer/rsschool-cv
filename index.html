@@ -7,8 +7,15 @@
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Yuriy Lavroushin CV - RS_School Task</title>
+    <!--  normalize.css for normalize default agent styles.  -->
     <link rel="stylesheet" type="text/css" href="./styles/normalize.css">
+    <!--  Styles for highlight code in code example section by highlight.js.  -->
+    <link rel="stylesheet" href="./styles/default.min.css">
+    <!--  My styles.  -->
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <!--  Script for highlight code in code example section by highlight.js.  -->
+    <script src="./js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </head>
 
 <body>
@@ -70,7 +77,7 @@
                     <img src="img/avatar.jpg" height="512" alt="My_photo">
                 </section>
 
-                <section class="sections-wrapper__content-block section">
+                <section class="sections-wrapper__content-block section" id="contacts">
                     <h2>Contacts</h2>
                     <ul>
                         <li>Phone Number: +7-999-999-99-99</li>
@@ -144,7 +151,70 @@
 
                 <section class="sections-wrapper__content-block section">
                     <h2>Code Example</h2>
-                    <p>I'll add it later</p></section>
+<pre class="js code-example">
+<code>
+/**
+ * Get files from links, stored in object, and save to default browser download dir.
+ * @param linksObj      {Object}  - Object with links.
+ * @param [modeDebug]   {Boolean} - work in debug mode - debug information.
+ *                                  Optional. Default = false.
+ * @param [modeVerbose] {Boolean} - work in verbose mode - more information about work.
+ *                                  Optional. Default = false.
+ */
+function getSourceByLinksFromObject(
+  linksObj,
+  modeDebug = false,
+  modeVerbose = false,
+) {
+  const arrayOfLinks = Array();
+
+  if (modeVerbose) {
+    // eslint-disable-next-line no-console
+    console.log(
+      `\n${"".padStart(45, `-`)}`
+      + `\n**** Download files by links from object ****`
+      + `\n${"".padStart(45, `-`)}`,
+    );
+  }
+  if (modeDebug) {
+    // eslint-disable-next-line no-console
+    console.log("Source object:\n", linksObj);
+    // eslint-disable-next-line no-console
+    console.log(`Object length top lvl = ${linksObj.length}`);
+  }
+  if (modeVerbose) {
+    // eslint-disable-next-line no-console
+    console.log(`\nStep 1: get all finite values from source object in Array.`);
+  }
+  const arrayOfData = getFiniteValueAndReturnArray(linksObj);
+  if (modeDebug) {
+    // eslint-disable-next-line no-console
+    console.log("All finite values from source object:\n", arrayOfData);
+  }
+  if (modeVerbose) {
+    // eslint-disable-next-line no-console
+    console.log(`\nStep 2: get only links from values.`);
+  }
+  arrayOfData.forEach((value) => {
+    if (checkStringIsUrl(value)) {
+      arrayOfLinks.push(value);
+    }
+  });
+  if (modeDebug) {
+    // eslint-disable-next-line no-console
+    console.log("All links from source object:\n", arrayOfLinks);
+  }
+  if (modeVerbose) {
+    // eslint-disable-next-line no-console
+    console.log(`\nStep 3: download files.`);
+  }
+  // arrayOfLinks.forEach((link) => {
+  //   getSourceByLink(link);
+  // });
+}
+</code>
+</pre>
+                </section>
 
                 <section class="sections-wrapper__content-block section">
                     <h2>Experience</h2>
