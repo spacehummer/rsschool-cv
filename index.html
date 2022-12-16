@@ -3,12 +3,17 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Yuriy Lavroushin CV - RS_School Task</title>
     <link rel="stylesheet" type="text/css" href="./styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
 </head>
 
 <body>
+
+<div class="root-container">
 
     <!-- Заголовок -->
     <header class="header" id="header">
@@ -50,13 +55,23 @@
 
                 <section class="sections-wrapper__content-block general-info">
                     <h1>Yuriy Lavroushin</h1>
+                    <!-- preserveAspectRatio='none'-->
+                    <!-- viewBox="0 0 128 8" preserveAspectRatio='xMidYMid meet'-->
+                    <div class="general-info__separator-wrp">
+                        <svg class="general-info__separator" width="320" height="2"
+                             xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 320 2">
+                            <g id="Separator">
+                                <rect width="320" height="2"/>
+                            </g>
+                        </svg>
+                    </div>
                     <h2>Junior Front-End Developer</h2>
-                    <p>
-                        <img src="img/avatar.jpg" height="512" alt="My_photo">
-                    </p>
+                    <img src="img/avatar.jpg" height="512" alt="My_photo">
                 </section>
 
-                <section class="sections-wrapper__content-block"><h2>Contacts</h2>
+                <section class="sections-wrapper__content-block section">
+                    <h2>Contacts</h2>
                     <ul>
                         <li>Phone Number: +7-999-999-99-99</li>
                         <li>E-mail: myemail@example.com</li>
@@ -64,7 +79,8 @@
                     </ul>
                 </section>
 
-                <section class="sections-wrapper__content-block"><h2>About Me</h2>
+                <section class="sections-wrapper__content-block section">
+                    <h2>About Me</h2>
                     <p>I love everything related to electronics, engineering and development.
                         Initially,
                         I saw myself as a
@@ -85,7 +101,8 @@
                         technologies and are often intertwined with other technologies.
                     </p></section>
 
-                <section class="sections-wrapper__content-block"><h2>Skills</h2>
+                <section class="sections-wrapper__content-block section">
+                    <h2>Skills</h2>
                     <div class="tech_logo">
                         <img
                           src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"
@@ -125,10 +142,12 @@
                     </ul>
                 </section>
 
-                <section class="sections-wrapper__content-block"><h2>Code Example</h2>
+                <section class="sections-wrapper__content-block section">
+                    <h2>Code Example</h2>
                     <p>I'll add it later</p></section>
 
-                <section class="sections-wrapper__content-block"><h2>Experience</h2>
+                <section class="sections-wrapper__content-block section">
+                    <h2>Experience</h2>
                     <p>Participated in the development of networking hardware, as Test Engineer,
                         Quality
                         Architect and Technical writer.</p>
@@ -136,12 +155,14 @@
                         as
                         a designer, technical writer and content manager.</p></section>
 
-                <section class="sections-wrapper__content-block"><h2>Education</h2>
+                <section class="sections-wrapper__content-block section">
+                    <h2>Education</h2>
                     <p>Moscow State University of Civil Engineering (MGSU), Bachelor's degree in
                         Mathematical and computer modeling of mechanical systems and processes.</p>
                 </section>
 
-                <section class="sections-wrapper__content-block"><h2>Languages</h2>
+                <section class="sections-wrapper__content-block section">
+                    <h2>Languages</h2>
                     <ul>
                         <li>Russian: native speaker.</li>
                         <li>English: A2-B1 level.</li>
@@ -159,6 +180,7 @@
             <p class="footer-txt">RS_School task: CV#2. HTML, CSS &amp; Git Basics</p>
         </div>
     </footer>
+</div>
 
 </body>
 
