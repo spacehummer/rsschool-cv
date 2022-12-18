@@ -170,7 +170,7 @@ function addAllFieldsAsTextNode(
   elementName,
   elementsClassesList,
 ) {
-  for (let i = 0; i < elementsArray.length; i++) {
+  for (let i = 0; i &lt; elementsArray.length; i++) {
     nodeToUpdate.appendChild(document.createElement(elementName));
   }
   /* Append elements and work with classes only if node have children.
@@ -180,9 +180,9 @@ function addAllFieldsAsTextNode(
     return;
   }
   const children = nodeToUpdate.childNodes;
-  for (let i = 0; i < children.length; ++i) {
+  for (let i = 0; i &lt; children.length; ++i) {
     children[i].appendChild(document.createTextNode(elementsArray[i]));
-    if (elementsClassesList[i] !== '') {
+    if (elementsClassesList[i] !== &apos;&apos;) {
       children[i].classList.add(elementsClassesList[i]);
     }
   }
