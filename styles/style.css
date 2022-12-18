@@ -304,7 +304,7 @@ h2 {
 
 .content-footer {
     /* Выравнивание по вертикали */
-    display: block;
+    display: flex;
     height: 100%;
     margin: auto auto;
 }
@@ -313,8 +313,9 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     height: fit-content;
-    margin: auto;
+    margin: auto 0;
 }
 
 /*#footer-wrp * {*/
@@ -341,3 +342,15 @@ h2 {
 }
 
 /*</editor-fold desc="Footer">*/
+
+@media (max-width: 1250px) {
+    .general-info {
+        grid-template:
+        " avatar " auto
+        " name   " auto
+        " line   " auto
+        " spec   " auto /
+        1fr             ;
+        gap: 16px;
+    }
+}
