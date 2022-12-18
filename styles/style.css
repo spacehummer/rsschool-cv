@@ -1,0 +1,356 @@
+
+/*<editor-fold desc="Fonts define">*/
+
+/*      local() - try to get on user device. */
+/*      url() - get from site server dir or by url from web. */
+/*      In src order mean prioroty. */
+
+/* OpenGost Type A TT Regular */
+@font-face {
+    font-family: 'OpenGost Type A TT';
+    src:    local('OpenGost Type A TT Regular'),
+            local('OpenGost-Type-A-TT Regular'),
+            url('../fonts/OpenGostTypeA-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* OpenGost Type B TT Regular */
+@font-face {
+    font-family: 'OpenGost Type B TT Regular';
+    src:    local('OpenGost Type B TT Regular'),
+            local('OpenGost-Type-B-TT'),
+            url('../fonts/OpenGostTypeB-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Anonymous Pro Regular */
+@font-face {
+    font-family: 'Anonymous Pro Regular';
+    src:    local('Anonymous Pro Regular'),
+            local('Anonymous-Pro-Regular'),
+            url('../fonts/Anonymous-Pro.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*</editor-fold>*/
+
+* {
+    box-sizing: border-box;
+}
+
+.root-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    font-family: 'Anonymous Pro Regular', serif;
+    font-weight: normal;    /* = 400, default. */
+}
+
+h1 {
+    font-size: 64px;
+    font-family: 'OpenGost Type A TT', sans-serif;
+    font-weight: bold;    /* = 700. */
+    letter-spacing: 0.2em;
+}
+
+h2 {
+    font-size: 32px;
+    font-family: 'OpenGost Type A TT', sans-serif;
+    font-weight: bold;    /* = 700. */
+    letter-spacing: 0.2em;
+}
+
+.header {
+    background: #3186b9;
+    height: 82px;
+    opacity: 80%;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    /* Content block standard width */
+    max-width: 1600px;
+    /* Выравнивание по центру */
+    margin: 0 auto;
+}
+
+.content-header {
+    width: 100%;
+    height: 100%;
+}
+
+.navigation {
+    height: 100%;
+}
+
+.navigation__list {
+    /* reset default ul styles */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* в строку выровняли */
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: space-between;
+    /*width: 100%;*/
+    height: 100%;
+}
+
+.navigation__list__item {
+    /*flex: 1;*/
+    /*width: 100%;*/
+    font-family: 'OpenGost Type A TT', sans-serif;
+    font-weight: bold;    /* = 700. */
+    font-size: 30px;
+    letter-spacing: 0.15em;
+}
+
+.navigation__list__item > .item__link {
+    /* Reset default styles */
+    outline: none;
+    text-decoration: none;
+    /* My styles */
+    display: inline-block;
+    width: max-content;
+    margin: 0 auto;
+    /*background-color: aquamarine;*/
+    padding: 10px 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*.navigation__list__item:first-child > .item__link {*/
+/*    padding: 10px 0;*/
+/*}*/
+
+/*.navigation__list__item:last-child > .item__link {*/
+/*    padding: 10px 0;*/
+/*}*/
+
+.navigation__list__item > .item__link:link {
+    color: white;
+}
+
+.navigation__list__item > .item__link:visited {
+    color: white;
+}
+
+.navigation__list__item > .item__link:focus {
+    color: white;
+}
+
+.navigation__list__item > .item__link:hover {
+    color: white;
+}
+
+.navigation__list__item > .item__link:active {
+    color: white;
+}
+
+
+/*<editor-fold desc="Main">*/
+.content__sections-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: max-content;
+}
+
+.sections-wrapper__content-block {
+    padding: 16px;
+}
+
+.general-info {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template:
+        " avatar  .  name   name " 1fr
+        " avatar  .  line   line " auto
+        " avatar  .  spec   spec " 1fr /
+        1fr     0  0.5fr  0.5fr        ;
+    gap: 16px;
+}
+
+.section {
+    min-width: 0;
+}
+
+.general-info > h1 {
+    grid-area: name;
+    display: inline-block;
+    width: max-content;
+    height: max-content;
+    align-self: end;
+    margin: 0;
+    justify-self: center;
+}
+
+.general-info > .general-info__separator-wrp {
+    grid-area: line;
+    justify-self: center;
+    width: 576px;
+    height: 2px;
+}
+
+.general-info .general-info__separator {
+    display: block;
+    width: 576px;
+    height: 2px;
+}
+
+.general-info .general-info__separator rect {
+    width: 576px;
+    height: 2px;
+    transition: fill 8s;
+    fill: #543BD1;
+    /*stroke-width: 2;*/
+    /*stroke: #868299;*/
+    /*fill: #868299;*/
+    /*height: 2px;*/
+}
+
+.general-info .general-info__separator rect:hover {
+    transition: fill 2s;
+    fill: #D13B88;
+}
+
+/*.general-info > h1:after {*/
+/*    !* Grid *!*/
+/*    grid-area: line;*/
+/*    !*grid-column-start: -3;*!*/
+/*    !*grid-column-end: span -2;*!*/
+/*    !*grid-row-start: -2;*!*/
+/*    !*grid-row-end: -1;*!*/
+/*    !* Style *!*/
+/*    content: "";*/
+/*    !*z-index: 2;*!*/
+/*    position: absolute;*/
+/*    bottom: calc(0% - 1.25em);*/
+/*    left: calc(0% - 7.5em);*/
+/*    !*margin-left: -70px;*!*/
+/*    width: calc(10em);*/
+/*    height: 2px;*/
+/*    background-color: #868299;*/
+/*}*/
+
+.general-info > h2 {
+    grid-area: spec;
+    display: inline-block;
+    width: max-content;
+    height: max-content;
+    margin: 0;
+    justify-self: center;
+}
+
+.general-info > img {
+    grid-area: avatar;
+    justify-self: center;
+}
+
+.code-example > code {
+    overflow-y: scroll;
+    overflow-x: scroll;
+    max-height: 384px;
+    margin: 0;
+}
+
+
+/*<editor-fold desc="Scrollbar styles for code block">*/
+
+/* Scrollbar: main style */
+.code-example > code::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+/* Track */
+.code-example > code::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+/* Handle */
+.code-example > code::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background: rgba(128, 210, 255, 0.5);
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.5);
+}
+.code-example > code::-webkit-scrollbar-thumb:window-inactive {
+    background: #CFDCE6;
+}
+/*</editor-fold desc="Scrollbar styles for code block">*/
+
+/*</editor-fold desc="Main">*/
+
+
+/*<editor-fold desc="Footer">*/
+.footer {
+    /*text-align: center;*/
+    /*background: #4e5754;*/
+    background: #0a4763;
+    width: 100%;
+    height: 128px;
+    opacity: 80%;
+    padding: 0;
+}
+
+.content-footer {
+    /* Выравнивание по вертикали */
+    display: flex;
+    height: 100%;
+    margin: auto auto;
+}
+
+#footer-wrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    margin: auto 0;
+}
+
+/*#footer-wrp * {*/
+/*    display: block;*/
+/*}*/
+
+.footer-txt {
+    width: max-content;
+    text-align: center;
+    margin: 0;
+    color: #ffffff;
+}
+
+.footer-txt > a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer-rss-logo {
+    display: block;
+    width: 121px;
+    height: 45px;
+    background-image: url("../icons/rs_school_js_black.svg");
+}
+
+/*</editor-fold desc="Footer">*/
+
+@media (max-width: 1250px) {
+    .general-info {
+        grid-template:
+        " avatar " auto
+        " name   " auto
+        " line   " auto
+        " spec   " auto /
+        1fr             ;
+        gap: 16px;
+    }
+}
