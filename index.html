@@ -25,7 +25,7 @@
     <!-- Заголовок -->
     <header class="header" id="header">
         <div class="content content-header">
-            <div class="navigation">
+            <nav class="navigation">
                 <ul class="navigation__list">
                     <li class="navigation__list__item">
                         <a href="#" class="item__link">Contacts</a>
@@ -49,7 +49,7 @@
                         <a href="#" class="item__link">Languages</a>
                     </li>
                 </ul>
-            </div>
+            </nav>
         </div>
 
     </header>
@@ -170,7 +170,7 @@ function addAllFieldsAsTextNode(
   elementName,
   elementsClassesList,
 ) {
-  for (let i = 0; i < elementsArray.length; i++) {
+  for (let i = 0; i &lt; elementsArray.length; i++) {
     nodeToUpdate.appendChild(document.createElement(elementName));
   }
   /* Append elements and work with classes only if node have children.
@@ -180,9 +180,9 @@ function addAllFieldsAsTextNode(
     return;
   }
   const children = nodeToUpdate.childNodes;
-  for (let i = 0; i < children.length; ++i) {
+  for (let i = 0; i &lt; children.length; ++i) {
     children[i].appendChild(document.createTextNode(elementsArray[i]));
-    if (elementsClassesList[i] !== '') {
+    if (elementsClassesList[i] !== &apos;&apos;) {
       children[i].classList.add(elementsClassesList[i]);
     }
   }
@@ -221,9 +221,14 @@ function addAllFieldsAsTextNode(
 
     <!-- Подвал -->
     <footer class="footer" id="footer">
+      <div class="content content-footer">
         <div id="footer-wrp">
-            <p class="footer-txt">RS_School task: CV#2. HTML, CSS &amp; Git Basics</p>
+          <div class="footer-txt">&copy; 2022
+            <a href="https://github.com/spacehummer" class="my-github-name-link">spacehummer</a>
+          </div>
+          <a href="https://github.com/irinainina" class="footer-rss-logo"></a>
         </div>
+      </div>
     </footer>
 </div>
 
