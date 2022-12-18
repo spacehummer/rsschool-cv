@@ -1,3 +1,42 @@
+
+/*<editor-fold desc="Fonts define">*/
+
+/*      local() - try to get on user device. */
+/*      url() - get from site server dir or by url from web. */
+/*      In src order mean prioroty. */
+
+/* OpenGost Type A TT Regular */
+@font-face {
+    font-family: 'OpenGost Type A TT';
+    src:    local('OpenGost Type A TT Regular'),
+            local('OpenGost-Type-A-TT Regular'),
+            url('../fonts/OpenGostTypeA-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* OpenGost Type B TT Regular */
+@font-face {
+    font-family: 'OpenGost Type B TT Regular';
+    src:    local('OpenGost Type B TT Regular'),
+            local('OpenGost-Type-B-TT'),
+            url('../fonts/OpenGostTypeB-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Anonymous Pro Regular */
+@font-face {
+    font-family: 'Anonymous Pro Regular';
+    src:    local('Anonymous Pro Regular'),
+            local('Anonymous-Pro-Regular'),
+            url('../fonts/Anonymous-Pro.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*</editor-fold>*/
+
 * {
     box-sizing: border-box;
 }
@@ -7,6 +46,22 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
+    font-family: 'Anonymous Pro Regular', serif;
+    font-weight: normal;    /* = 400, default. */
+}
+
+h1 {
+    font-size: 64px;
+    font-family: 'OpenGost Type A TT', sans-serif;
+    font-weight: bold;    /* = 700. */
+    letter-spacing: 0.2em;
+}
+
+h2 {
+    font-size: 32px;
+    font-family: 'OpenGost Type A TT', sans-serif;
+    font-weight: bold;    /* = 700. */
+    letter-spacing: 0.2em;
 }
 
 .header {
@@ -50,6 +105,10 @@
 .navigation__list__item {
     /*flex: 1;*/
     /*width: 100%;*/
+    font-family: 'OpenGost Type A TT', sans-serif;
+    font-weight: bold;    /* = 700. */
+    font-size: 30px;
+    letter-spacing: 0.15em;
 }
 
 .navigation__list__item > .item__link {
@@ -60,7 +119,6 @@
     display: inline-block;
     width: max-content;
     margin: 0 auto;
-    font-size: 24px;
     /*background-color: aquamarine;*/
     padding: 10px 16px;
     text-align: center;
@@ -136,18 +194,18 @@
 .general-info > .general-info__separator-wrp {
     grid-area: line;
     justify-self: center;
-    width: 320px;
+    width: 576px;
     height: 2px;
 }
 
 .general-info .general-info__separator {
     display: block;
-    width: 320px;
+    width: 576px;
     height: 2px;
 }
 
 .general-info .general-info__separator rect {
-    width: 320px;
+    width: 576px;
     height: 2px;
     transition: fill 8s;
     fill: #543BD1;
