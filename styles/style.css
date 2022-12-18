@@ -293,22 +293,51 @@ h2 {
 
 /*<editor-fold desc="Footer">*/
 .footer {
-    text-align: center;
+    /*text-align: center;*/
     /*background: #4e5754;*/
     background: #0a4763;
-    color: #b87333;
+    width: 100%;
     height: 128px;
-    display: flex;
     opacity: 80%;
-    margin: 0;
     padding: 0;
 }
 
-.footer-txt {
-    margin: 4px;
+.content-footer {
+    /* Выравнивание по вертикали */
+    display: block;
+    height: 100%;
+    margin: auto auto;
 }
 
 #footer-wrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
     margin: auto;
 }
+
+/*#footer-wrp * {*/
+/*    display: block;*/
+/*}*/
+
+.footer-txt {
+    width: max-content;
+    text-align: center;
+    margin: 0;
+    color: #ffffff;
+}
+
+.footer-txt > a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer-rss-logo {
+    display: block;
+    width: 121px;
+    height: 45px;
+    background-image: url("../icons/rs_school_js_black.svg");
+}
+
 /*</editor-fold desc="Footer">*/
