@@ -9,7 +9,7 @@
 @font-face {
     font-family: 'OpenGost Type A TT';
     src:    local('OpenGost Type A TT Regular'),
-            local('OpenGost-Type-A-TT Regular'),
+            local('OpenGost-Type-A-TT-Regular'),
             url('../fonts/OpenGostTypeA-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
@@ -17,9 +17,9 @@
 
 /* OpenGost Type B TT Regular */
 @font-face {
-    font-family: 'OpenGost Type B TT Regular';
+    font-family: 'OpenGost Type B TT';
     src:    local('OpenGost Type B TT Regular'),
-            local('OpenGost-Type-B-TT'),
+            local('OpenGost-Type-B-TT-Regular'),
             url('../fonts/OpenGostTypeB-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
@@ -27,7 +27,7 @@
 
 /* Anonymous Pro Regular */
 @font-face {
-    font-family: 'Anonymous Pro Regular';
+    font-family: 'Anonymous Pro';
     src:    local('Anonymous Pro Regular'),
             local('Anonymous-Pro-Regular'),
             url('../fonts/Anonymous-Pro.ttf') format('truetype');
@@ -46,7 +46,7 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-    font-family: 'Anonymous Pro Regular', serif;
+    font-family: 'Anonymous Pro', serif;
     font-weight: normal;    /* = 400, default. */
 }
 
