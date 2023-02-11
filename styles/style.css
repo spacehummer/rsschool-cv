@@ -255,29 +255,19 @@ h2 {
 
 .contacts-list {
     display: table;
-    /*display: grid;*/
-    /*grid-template:*/
-    /*        " el1  el2 " auto*/
-    /*        " el1  el2 " auto*/
-    /*        " el1  el2 " auto /*/
-    /*          max-content   auto           ;*/
-    /*grid-template-columns: auto auto;*/
 }
 
 .contacts-list > li {
-    /*display: grid;*/
-    /*grid-template:*/
-    /*        " el1  el2 " auto*/
-    /*        " el1  el2 " auto*/
-    /*        " el1  el2 " auto !*/
-    /*          max-content   auto           ;*/
     display: table-row;
     position: relative;
 }
 
 .contacts-list > li::before {
     position: absolute;
-    content: '';
+    content: '\25CF';
+    font-size: 65%;
+    left: -16px;
+    top: 4px;
 }
 
 .contacts-list > li > span {
