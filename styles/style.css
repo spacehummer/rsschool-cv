@@ -317,10 +317,36 @@ h2 {
     background: rgba(128, 210, 255, 0.5);
     -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.5);
 }
+
 .code-example > code::-webkit-scrollbar-thumb:window-inactive {
     background: #CFDCE6;
 }
 /*</editor-fold desc="Scrollbar styles for code block">*/
+
+.projects-list {
+    display: table;
+}
+
+.projects-list > li {
+    display: table-row;
+    position: relative;
+}
+
+.projects-list > li::before {
+    position: absolute;
+    content: '\25CF';
+    font-size: 65%;
+    left: -16px;
+    top: 4px;
+}
+
+.projects-list > li > span {
+    display: table-cell;
+}
+
+.projects-list > li a:last-child {
+    padding-left: 16px;
+}
 
 /*</editor-fold desc="Main">*/
 
