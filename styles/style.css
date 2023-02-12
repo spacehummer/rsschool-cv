@@ -284,6 +284,7 @@ h2 {
     /*grid-area: el2;*/
     /*grid-template-columns: subgrid;*/
     /*grid-template-rows: subgrid;*/
+    padding-left: 16px;
 }
 
 .code-example > code {
