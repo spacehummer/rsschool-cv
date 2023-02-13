@@ -348,6 +348,31 @@ h2 {
     padding-left: 16px;
 }
 
+.languages-list {
+    display: table;
+}
+
+.languages-list > li {
+    display: table-row;
+    position: relative;
+}
+
+.languages-list > li::before {
+    position: absolute;
+    content: '\25CF';
+    font-size: 65%;
+    left: -16px;
+    top: 4px;
+}
+
+.languages-list > li > span {
+    display: table-cell;
+}
+
+.languages-list > li span:last-child {
+    padding-left: 16px;
+}
+
 /*</editor-fold desc="Main">*/
 
 
