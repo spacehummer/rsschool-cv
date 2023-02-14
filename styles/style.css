@@ -251,6 +251,12 @@ h2 {
 .general-info > img {
     grid-area: avatar;
     justify-self: center;
+    border-top-left-radius: 96px;
+    border-bottom-right-radius: 96px;
+    height: 384px;
+    width: 384px;
+    object-fit: cover;
+    object-position: center bottom;
 }
 
 .contacts-list {
