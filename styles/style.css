@@ -9,7 +9,7 @@
 @font-face {
     font-family: 'OpenGost Type A TT';
     src:    local('OpenGost Type A TT Regular'),
-            local('OpenGost-Type-A-TT Regular'),
+            local('OpenGost-Type-A-TT-Regular'),
             url('../fonts/OpenGostTypeA-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
@@ -17,9 +17,9 @@
 
 /* OpenGost Type B TT Regular */
 @font-face {
-    font-family: 'OpenGost Type B TT Regular';
+    font-family: 'OpenGost Type B TT';
     src:    local('OpenGost Type B TT Regular'),
-            local('OpenGost-Type-B-TT'),
+            local('OpenGost-Type-B-TT-Regular'),
             url('../fonts/OpenGostTypeB-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
@@ -27,7 +27,7 @@
 
 /* Anonymous Pro Regular */
 @font-face {
-    font-family: 'Anonymous Pro Regular';
+    font-family: 'Anonymous Pro';
     src:    local('Anonymous Pro Regular'),
             local('Anonymous-Pro-Regular'),
             url('../fonts/Anonymous-Pro.ttf') format('truetype');
@@ -46,7 +46,7 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-    font-family: 'Anonymous Pro Regular', serif;
+    font-family: 'Anonymous Pro', serif;
     font-weight: normal;    /* = 400, default. */
 }
 
@@ -251,6 +251,46 @@ h2 {
 .general-info > img {
     grid-area: avatar;
     justify-self: center;
+    border-top-left-radius: 96px;
+    border-bottom-right-radius: 96px;
+    height: 448px;
+    width: 384px;
+    object-fit: cover;
+    object-position: center bottom;
+}
+
+.contacts-list {
+    display: table;
+}
+
+.contacts-list > li {
+    display: table-row;
+    position: relative;
+}
+
+.contacts-list > li::before {
+    position: absolute;
+    content: '\25CF';
+    font-size: 65%;
+    left: -16px;
+    top: 4px;
+}
+
+.contacts-list > li > span {
+    display: table-cell;
+}
+
+.contacts-list > li span:first-child {
+    /*grid-area: el1;*/
+    /*grid-template-columns: subgrid;*/
+    /*!*grid-template-rows: repeat(1, min-content);*!*/
+}
+
+.contacts-list > li span:last-child {
+    /*grid-area: el2;*/
+    /*grid-template-columns: subgrid;*/
+    /*grid-template-rows: subgrid;*/
+    padding-left: 16px;
 }
 
 .code-example > code {
@@ -283,10 +323,61 @@ h2 {
     background: rgba(128, 210, 255, 0.5);
     -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.5);
 }
+
 .code-example > code::-webkit-scrollbar-thumb:window-inactive {
     background: #CFDCE6;
 }
 /*</editor-fold desc="Scrollbar styles for code block">*/
+
+.projects-list {
+    display: table;
+}
+
+.projects-list > li {
+    display: table-row;
+    position: relative;
+}
+
+.projects-list > li::before {
+    position: absolute;
+    content: '\25CF';
+    font-size: 65%;
+    left: -16px;
+    top: 4px;
+}
+
+.projects-list > li > span {
+    display: table-cell;
+}
+
+.projects-list > li a:last-child {
+    padding-left: 16px;
+}
+
+.languages-list {
+    display: table;
+}
+
+.languages-list > li {
+    display: table-row;
+    position: relative;
+}
+
+.languages-list > li::before {
+    position: absolute;
+    content: '\25CF';
+    font-size: 65%;
+    left: -16px;
+    top: 4px;
+}
+
+.languages-list > li > span {
+    display: table-cell;
+}
+
+.languages-list > li span:last-child {
+    padding-left: 16px;
+}
 
 /*</editor-fold desc="Main">*/
 
