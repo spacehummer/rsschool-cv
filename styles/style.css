@@ -147,6 +147,7 @@ h2 {
 
 .navigation__list__item > .item__link:hover {
     color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1), 1px 1px 1px rgba(0, 0, 0, 1);
 }
 
 .navigation__list__item > .item__link:active {
